@@ -29,10 +29,9 @@ public class Events {
 					235 * event.resolution.getScaleFactor());
 			GL11.glEnable(GL11.GL_SCISSOR_TEST);
 
-			double deg = mc.thePlayer.rotationYaw - 180D;
-			deg %= 360;
-			if (deg < 0) deg = 360D - deg;
-			double rad = Math.toRadians(deg);
+			double deg = mc.thePlayer.rotationYaw + 180D;
+			deg %= 360D;
+			if (deg < 0) deg = 360D + deg;
 
 			GL11.glEnable(GL11.GL_BLEND);
 			GL11.glDisable(GL11.GL_TEXTURE_2D);
